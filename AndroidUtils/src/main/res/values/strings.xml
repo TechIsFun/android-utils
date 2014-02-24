@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AndroidUtils</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="data">Mobile Data</string>
+
+    <!-- InfoActivity -->
+    <string name="app_author">author</string>
+    <string name="app_author_email">author@example.com</string>
+    <string name="app_libs_array_header">Credits</string>
+    <string-array name="app_libs_array">
+        <item>ActionBarSherlock, http://actionbarsherlock.com</item>
+        <item>Android-Validator, http://github.com/TechIsFun/AndroidUtils</item>
+    </string-array>
+    <string name="app_licenses_array_header">Licenses</string>
+    <string-array name="app_licenses_array">
+        <item>Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+</resources>
