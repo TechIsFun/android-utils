@@ -1,6 +1,7 @@
 package com.github.techisfun.android.utils.toast;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -8,9 +9,11 @@ import android.widget.Toast;
  */
 public class NoOverlappingToast {
 
-    private static final long INTERVAL = 5*1000; // 5 seconds
+    private static final String TAG = NoOverlappingToast.class.getSimpleName();
 
-    private long lastToastTime;
+    protected static final long INTERVAL = 5*1000; // 5 seconds
+
+    private static long lastToastTime;
 
     private CharSequence mText;
 
