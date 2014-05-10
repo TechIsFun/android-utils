@@ -2,6 +2,9 @@ package com.github.techisfun.android.utils.preferences;
 
 import android.test.InstrumentationTestCase;
 
+import java.lang.String;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -51,10 +54,23 @@ public class PreferencesHelperTest {
 
     @Test
     public void testPutStringSet() {
+        HashSet<String> items = new HashSet<String>(Arrays.asList("batman", "superman", "pippo"));
 
+        mPreferencesHelper.putStringSet("test-key", items);
+
+        Set<String> savedItems = mPreferencesHelper.getStringSet("test-key");
+
+        assertNotNull(savedItems);
+        assertEquals(3, savedItems.size());
+        assertTrue(savedItems.contains("batman"));
+        assertTrue(savedItems.contains("superman"));
+        assertTrue(savedItems.contains("pippo"));
     }
 
     @Test
     public void testGetStringSet_default() {
+        HashSet<String> defaultItems = new HashSet<String>(Arrays.asList("batman", "superman", "pippo"));
+
+        assertSame(defaultItems, mPreferencesHelper.getStringSet("not-exists", defaultItems));
     }
 }
