@@ -1,5 +1,8 @@
 language: java
 jdk: oraclejdk7
 
+before_install:
+ - chmod a+x gradlew
+
 script: 
  - ./gradlew clean assemble test
