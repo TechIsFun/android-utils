@@ -28,7 +28,6 @@ public class NoOverlappingToastTest {
     /**
      * TODO: this test must be reviwed
      */
-    @Test
     public void ingore_testTwoNonOverlappingToasts() throws InterruptedException {
         new NoOverlappingToast(Robolectric.application, "a simple toast part 1").show();
 
