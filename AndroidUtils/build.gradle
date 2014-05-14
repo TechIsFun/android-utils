@@ -12,9 +12,9 @@ buildscript {
         classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.7'
     }
 }
+
 apply plugin: 'android-library'
 apply plugin: 'android-test'
-apply plugin: 'signing'
 apply plugin: 'nexus'
 
 group = 'com.github.techisfun'
