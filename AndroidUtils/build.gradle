@@ -15,6 +15,7 @@ buildscript {
 
 apply plugin: 'android-library'
 apply plugin: 'android-test'
+apply plugin: 'maven'
 apply plugin: 'nexus'
 
 group = 'com.github.techisfun'
