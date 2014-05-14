@@ -26,11 +26,6 @@ configurations {
     }
 }
 
-signing {
-    required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
-    sign configurations.archives
-}
-
 repositories {
     mavenCentral()
 }
@@ -99,7 +94,6 @@ modifyPom {
             developer {
                 id 'TechIsFun'
                 name 'Andrea Maglie'
-                //email 'benjamin.muschko@gmail.com'
             }
         }
     }
@@ -111,45 +105,3 @@ nexus {
     attachJavadoc = false
     sign = true
 }
-
-
-//uploadArchives {
-//    configuration = configurations.archives
-//    repositories.mavenDeployer {
-//        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-//
-//        repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-//                authentication(userName: sonatypeUsername, password: sonatypePassword)
-//        }
-//
-//        pom.artifactId = 'android-utils'
-//
-//        pom.project {
-//            name 'AndroidUtils'
-//            packaging 'aar'
-//            description 'Some utilities for Android'
-//            url 'https://github.com/TechIsFun/android-utils'
-//
-//            scm {
-//                url 'scm:git@github.com:TechIsFun/android-utils.git'
-//                connection 'scm:git@github.com:TechIsFun/android-utils.git'
-//                developerConnection 'scm:git@github.com:TechIsFun/android-utils.git'
-//            }
-//
-//            licenses {
-//                license {
-//                    name 'The Apache Software License, Version 2.0'
-//                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//                    distribution 'repo'
-//                }
-//            }
-//
-//            developers {
-//                developer {
-//                    id 'TechIsFun'
-//                    name 'Andrea Maglie'
-//                }
-//            }
-//        }
-//    }
-//}
