@@ -3,6 +3,9 @@
     <string name="wifi">Wi-Fi</string>
     <string name="data">Mobile Data</string>
 
+    <string name="done">Done</string>
+    <string name="discard">Discard</string>
+
     <!-- InfoActivity -->
     <string name="app_author">author</string>
     <string name="app_author_email">author@example.com</string>
